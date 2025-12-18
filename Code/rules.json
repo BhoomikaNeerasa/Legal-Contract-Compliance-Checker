@@ -1,0 +1,113 @@
+[
+  {
+    "id": "GDPR_CONSENT",
+    "conditions": {
+      "clause_type": "data_collection",
+      "collects_personal_data": true,
+      "consent_clarity": "none"
+    },
+    "risk": "High Risk",
+    "law": "GDPR",
+    "explanation": "Personal data is collected without obtaining user consent, which violates data protection regulations.",
+    "fix": "Add explicit opt-in consent before collecting personal data."
+  },
+  {
+    "id": "CCPA_SHARING",
+    "conditions": {
+      "clause_type": "data_sharing",
+      "shares_with_third_parties": true,
+      "consent_clarity": "none"
+    },
+    "risk": "High Risk",
+    "law": "CCPA",
+    "explanation": "User data is shared with third parties without consent or opt-out options.",
+    "fix": "Disclose third-party sharing and provide opt-in or opt-out controls."
+  },
+  {
+    "id": "BIOMETRIC_DATA",
+    "conditions": {
+      "biometric_data": true
+    },
+    "risk": "High Risk",
+    "law": "IT Act (India)",
+    "explanation": "Biometric data is sensitive personal information requiring strict legal safeguards.",
+    "fix": "Collect biometric data only with explicit written consent and strong security controls."
+  },
+  {
+    "id": "NO_REFUND",
+    "conditions": {
+      "clause_type": "refund",
+      "refund_policy": "none"
+    },
+    "risk": "Concerning",
+    "law": "Consumer Protection Act (India)",
+    "explanation": "A no-refund policy may be unfair and disadvantage consumers.",
+    "fix": "Introduce a reasonable refund or cancellation policy."
+  },
+  {
+    "id": "AUTO_RENEWAL",
+    "conditions": {
+      "clause_type": "subscription",
+      "auto_renewal": true
+    },
+    "risk": "Concerning",
+    "law": "Contract Fairness Laws",
+    "explanation": "Automatic renewal without clear disclosure may mislead users.",
+    "fix": "Provide clear renewal notices and an easy cancellation mechanism."
+  },
+  {
+    "id": "INDEFINITE_RETENTION",
+    "conditions": {
+      "clause_type": "data_retention",
+      "data_retention_indefinite": true
+    },
+    "risk": "Concerning",
+    "law": "Data Protection Principles",
+    "explanation": "Storing personal data indefinitely violates data minimization principles.",
+    "fix": "Define and disclose a clear data retention period."
+  },
+  {
+    "id": "VAGUE_DATA_USAGE",
+    "conditions": {
+      "clause_type": "data_collection",
+      "consent_clarity": "implicit"
+    },
+    "risk": "Concerning",
+    "law": "Transparency Principles",
+    "explanation": "Data usage terms are vague and do not clearly inform users.",
+    "fix": "Clearly explain what data is collected and how it is used."
+  },
+  {
+    "id": "USER_DATA_RIGHTS",
+    "conditions": {
+      "clause_type": "user_rights",
+      "user_data_deletion_right": true
+    },
+    "risk": "Safe",
+    "law": "GDPR User Rights",
+    "explanation": "Users are provided with rights to delete their personal data.",
+    "fix": "No action required. Clause follows best practices."
+  },
+  {
+    "id": "DATA_MINIMIZATION",
+    "conditions": {
+      "clause_type": "data_collection",
+      "consent_clarity": "explicit"
+    },
+    "risk": "Safe",
+    "law": "GDPR",
+    "explanation": "Personal data is collected only with explicit consent for specific purposes.",
+    "fix": "No action required. Clause is compliant."
+  },
+  {
+  "id": "VAGUE_DATA_SHARING",
+  "conditions": {
+    "clause_type": "data_sharing",
+    "consent_clarity": "implicit"
+  },
+  "risk": "Concerning",
+  "law": "Data Transparency Principles",
+  "explanation": "User data may be shared with third parties based on vague or implied consent.",
+  "fix": "Clearly specify data sharing purposes and obtain explicit user consent."
+}
+]
