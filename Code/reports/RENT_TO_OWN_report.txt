@@ -1,0 +1,47 @@
+                      RENT_TO_OWN.PDF                       
+============================================================
+FINAL COMPLIANCE DECISION
+============================================================
+OVERALL RISK LEVEL: Concerning
+⚠️ CONCERNING: REVIEW CAREFULLY AND SEEK CLARIFICATION BEFORE PROCEEDING.
+============================================================
+
+Clause 1
+LEG AL CONTENT DISCLAIMER
+The informa tion contained on this website is aimed at providing members of the public 
+with guidance on the law in South Africa. This informa tion has not been provided to meet 
+the individua l requir ements of a specific person and Lega lWise insists that lega l advice be 
+obtained to addr ess a person’ s unique circumstances. It is important to remember that the 
+law i
+Risk Level: Concerning
+Laws Violated: Rental & Tenancy Law, Contract Law
+Explanation: Rental agreement lacks termination or exit clarity.
+Suggested Fix: Define termination notice and conditions.
+------------------------------------------------------------
+
+Clause 2
+1. Paymen t
+1.1. The P arties agr ee tha t the pur chase price o f the item is R                                       and 
+that each month's r ent pa yment wi ll be applied to wards the pur chase price o f the Item.
+ 
+1.2. The R enter must pa y to the Owner the sum o f R                                       
+on                                                  as a deposit. 
+1.3. Subsequent pa ym
+Risk Level: Concerning
+Laws Violated: Contract Law
+Explanation: Payment terms are unclear or incomplete.
+Suggested Fix: Clearly specify payment amount, schedule, and penalties.
+------------------------------------------------------------
+
+Clause 3
+2. Signa ture Full name
+Renter:
+Signa ture          F ull name
+Signed a t                                                                       on                                                            20
+As witnesses for the Owner:
+Risk Level: Concerning
+Laws Violated: Rental & Tenancy Law
+Explanation: Rental agreement lacks termination or exit clarity.
+Suggested Fix: Define termination notice and conditions.
+------------------------------------------------------------
+
