@@ -28,7 +28,7 @@ os.makedirs(REPORT_FOLDER, exist_ok=True)
 
 ALLOWED_EXTENSIONS = {"pdf", "txt", "docx"}
 
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient("your_connection_string")
 db = client["compliance_checker"]
 users = db["users"]
 contracts = db["contracts"]
@@ -531,4 +531,5 @@ def download_pdf():
 
 if __name__ == "__main__":
     app.run(debug=True,use_reloader=False)
+
 
