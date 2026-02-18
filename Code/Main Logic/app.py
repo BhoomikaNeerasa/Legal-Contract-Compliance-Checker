@@ -16,7 +16,7 @@ from email.mime.multipart import MIMEMultipart
 
 
 app = Flask(__name__, template_folder="../templates")
-app.secret_key = "compliance_checker_secure_key_2026"
+app.secret_key = "your_secret_key_here"
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -36,8 +36,8 @@ stats = db["stats"]
 
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
-SENDER_EMAIL = "bhoomikaneerasa16@gmail.com"
-APP_PASSWORD = "fudsysizifoendkm"
+SENDER_EMAIL = "youremail@gmail.com"
+APP_PASSWORD = "your_16_digit_app_password"
 
 
 # Initialize stats if empty
@@ -531,3 +531,4 @@ def download_pdf():
 
 if __name__ == "__main__":
     app.run(debug=True,use_reloader=False)
+
