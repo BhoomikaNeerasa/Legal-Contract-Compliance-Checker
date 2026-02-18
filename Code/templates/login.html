@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login — Compliance Checker</title>
+
+  <!-- Theme -->
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/flatly/bootstrap.min.css" rel="stylesheet">
+
+  <!-- YOUR EXISTING STYLES -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="/">Compliance Checker</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active">Login / Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="flex-fill d-flex align-items-center justify-content-center">
+  <div class="card shadow p-4 slide-in-left" style="max-width: 400px; width:100%;">
+    <h3 class="text-center mb-4">Login</h3>
+    {% if error %}
+<div class="alert alert-danger text-center">
+  {{ error }}
+</div>
+{% endif %}
+{% if success %}
+<div class="alert alert-success text-center">
+  {{ success }}
+</div>
+{% endif %}
+
+    <!-- TEMPLATE FORM -->
+    <form method="POST" action="/login">
+      <div class="mb-3">
+        <label class="form-label">Email</label>
+        <input type="email" name="email" class="form-control" placeholder="you@example.com" required>
+      </div>
+
+
+
+      <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" name="password" class="form-control" placeholder="•••••••" required>
+      </div>
+
+      <div class="d-flex justify-content-between mb-3">
+        <a href="/forgot-password">Forgot password?</a>
+        <a href="/register">Register</a>
+      </div>
+
+      <button type="submit" class="btn btn-primary w-100">
+        Log in
+      </button>
+    </form>
+  </div>
+</main>
+
+<footer id="contact" class="text-center py-3 bg-primary text-white mt-auto">
+  <p>
+    &copy; 2026 Legal Contract Compliance Checker |
+    <a href="mailto:bhoomikaneerasa16@gmail.com">Contact Us</a>
+  </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  setTimeout(function() {
+    const alert = document.querySelector('.alert-success');
+    if (alert) {
+      alert.style.transition = "opacity 0.5s";
+      alert.style.opacity = "0";
+      setTimeout(() => alert.remove(), 500);
+    }
+  }, 4000);
+</script>
+
+</body>
+</html>

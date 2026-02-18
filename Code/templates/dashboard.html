@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard — Compliance Checker</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/flatly/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+  <!-- Navbar -->
+  <div id="navbar"></div>
+
+  <main class="container flex-fill py-5 text-center">
+    <h2>
+  Welcome, {{ session['user'].split('@')[0] }} 👋
+</h2>
+
+<p class="lead mt-2">
+  You can upload contracts and review compliance insights here.
+</p>
+
+    <div class="alert alert-light mt-4">
+  <p class="mb-0">
+    This workspace is configured for reviewing and managing
+    contract compliance activities within the system.
+  </p>
+</div>
+  </main>
+
+  <footer class="text-center py-3 bg-primary text-white mt-auto">
+    <p>&copy; 2026 Legal Contract Compliance Checker |
+      <a href="mailto:bhoomikaneerasa16@gmail.com">Contact Us</a>
+    </p>
+  </footer>
+
+  <!-- Load Navbar -->
+  <script>
+    fetch("navbar-auth.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
