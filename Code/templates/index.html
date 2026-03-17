@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Legal Contract Compliance Checker</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Flatly Bootswatch Theme -->
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/flatly/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    /* Hero Section */
+    .hero-title {
+      display: inline-block;
+      font-weight: bold;
+      font-size: 2.5rem;
+      color: #0d6efd;
+      white-space: pre;
+      border-right: 2px solid #0d6efd;
+      overflow: hidden;
+      transition: transform 0.3s ease, text-shadow 0.3s ease;
+    }
+    .hero-title:hover {
+      transform: scale(1.1);
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    }
+
+    .btn-hero {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .btn-hero:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Features Section */
+    .feature-card {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeUp 0.8s forwards;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transform-style: preserve-3d;
+    }
+    .feature-card:hover {
+      transform: perspective(500px) rotateX(3deg) rotateY(-3deg) scale(1.08);
+      box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+      z-index: 10;
+    }
+    .feature-card:nth-child(1){ animation-delay: 0.2s; }
+    .feature-card:nth-child(2){ animation-delay: 0.4s; }
+    .feature-card:nth-child(3){ animation-delay: 0.6s; }
+    .feature-card:nth-child(4){ animation-delay: 0.8s; }
+    .feature-card:nth-child(5){ animation-delay: 1s; }
+
+    @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+    .navbar-nav .nav-link { color: black; }
+    .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active { color: black; }
+    footer a { color: white; text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    /* Floating Help Button */
+.help-btn {
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6f42c1, #8e44ad);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.help-btn i {
+  font-size: 26px;
+  color: white;
+}
+
+.help-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000;
+}
+
+.help-container {
+  background: white;
+  width: 90%;
+  max-width: 750px;   /* Increased width */
+  max-height: 85vh;
+  overflow-y: auto;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.help-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.help-item {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.help-item:hover {
+  background: #f8f9fa;
+}
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="/">Compliance Checker</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/login">Login / Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <main class="flex-fill d-flex flex-column align-items-center justify-content-center text-center py-5 bg-light">
+    <div class="container">
+      <h1 class="hero-title" id="hero-text"></h1>
+      <p class="lead mt-3">AI-powered platform to evaluate contracts, highlight compliance risks, and provide actionable insights for safer agreements.</p>
+      <a href="/login" class="btn btn-primary btn-lg btn-hero mt-2">Get Started</a>
+    </div>
+  </main>
+
+  <!-- Features Section -->
+  <section class="container py-5">
+    <div class="row text-center g-4">
+      <div class="col-md-4 feature-card">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <h3>Clause Analysis</h3>
+          <p>Upload contracts and automatically analyze each clause for compliance issues.</p>
+        </div>
+      </div>
+      <div class="col-md-4 feature-card">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <h3>Visual Reports</h3>
+          <p>Generate reports showing Safe, Risky, and Illegal clauses.</p>
+        </div>
+      </div>
+      <div class="col-md-4 feature-card">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <h3>Compliance Dashboard</h3>
+          <p>Get a clear overview of overall compliance status in one intuitive dashboard.</p>
+        </div>
+      </div>
+      <div class="col-md-4 feature-card">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <h3>AI Insights</h3>
+          <p>Receive AI-driven explanations for why a clause is marked risky or non-compliant.</p>
+        </div>
+      </div>
+      <div class="col-md-4 feature-card">
+        <div class="p-4 border rounded shadow-sm h-100">
+          <h3>PDF Export</h3>
+          <p>Download a professional compliance report with a single click.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- Floating Help Chat Button -->
+<button id="helpBtn" class="help-btn">
+  <i class="bi bi-chat-dots-fill"></i>
+</button>
+<!-- Help Center Overlay -->
+<div id="helpOverlay" class="help-overlay d-none">
+  <div class="help-container">
+
+    <div class="help-header">
+      <button id="helpBack" class="btn btn-sm btn-light d-none">
+        <i class="bi bi-arrow-left"></i>
+      </button>
+
+      <h5 id="helpTitle" class="m-0">Help Center</h5>
+
+      <button id="helpClose" class="btn btn-sm btn-danger">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+
+    <div id="helpContent"></div>
+
+  </div>
+</div>
+  <!-- Footer -->
+  <footer id="contact" class="text-center py-4 bg-primary text-white mt-auto">
+    <p>&copy; 2026 Legal Contract Compliance Checker | <a href="mailto:bhoomikaneerasa16@gmail.com">Contact Us</a></p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Hero Typewriter -->
+  <script>
+    const textEl = document.getElementById('hero-text');
+    const text = "Legal Contract Compliance Checker";
+    let index = 0, forward = true;
+    function typeWriter() {
+      if (forward) { textEl.textContent = text.substring(0, index + 1); index++; if(index === text.length) forward = false; }
+      else { textEl.textContent = text.substring(0, index - 1); index--; if(index === 0) forward = true; }
+    }
+    setInterval(typeWriter, 150);
+  </script>
+
+  <!-- Smooth Scroll -->
+  <script>
+    document.querySelectorAll('a.nav-link[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+  <script src="/static/faq-data.js"></script>
+<script src="/static/help-desk.js"></script>
+</body>
+</html>
